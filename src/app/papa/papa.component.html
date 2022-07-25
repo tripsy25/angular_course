@@ -1,0 +1,4 @@
+<h1>Baby, take this money! ${{ moneyFromPapa }}</h1>
+<h1>Return me the remaining money after buying an IPhone.</h1>
+<app-child #childCompTemp (remainingMoneyEvent)="setRemainingMoney($event)" [moneyFromPapa]="moneyFromPapa" ></app-child>
+<h1>My baby, I've received the remaining amount ${{ remainingMoneyFromChild }}. Enjoy your new IPhone.</h1>

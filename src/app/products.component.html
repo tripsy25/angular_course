@@ -1,0 +1,21 @@
+<h1>Hi, I am Products Component</h1>
+
+<input *ngIf="!isDisabled" [(ngModel)]="productName">
+<input *ngIf="!isDisabled" [(ngModel)]="productColor">
+<!-- <button *ngIf="!isDisabled" (click)="productName='A Tree'" [disabled]='isDisabled'>Click Me!</button>
+<h1>{{ productName }}</h1>
+
+<button (click)="colorChangeAndAddProductOnClick()">Add Product</button>
+<div *ngFor="let product of products">{{ product.name }}</div>
+<h1>Child Component/ Cross Component Info</h1>
+<app-product (productClicked)="onRemoveProduct(product)" #productTemplate *ngFor = "let product of products" [productName]="product.name" [productColor]="product.color"></app-product>
+  -->
+<h1>Form started.</h1>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm" >
+    <input type="text" ngModel name="productName" required>
+    <button type="submit">Add Product</button>
+</form>
+<app-product (productClicked)="onRemoveProduct(product)" #productTemplate *ngFor = "let product of products" [productName]="product" [productColor]="product"></app-product>
+
+<!-- <h1>Reactive Form</h1> -->
+<!-- <app-reactiveForm [test]="hellog"></app-reactiveForm> -->
